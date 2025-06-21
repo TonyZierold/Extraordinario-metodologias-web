@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Todo List</title>
+  <link rel="stylesheet" href="css/todo.css">
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="js/firebase.js" defer></script>
+  <script src="js/todo.js" defer></script>
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Mi Todo List</h1>
+      <button id="logout-btn">Cerrar Sesión</button>
+    </header>
+    
+    <div class="todo-form">
+      <input type="text" id="new-todo" placeholder="Añade una nueva tarea...">
+      <button id="add-todo">Añadir</button>
+    </div>
+    
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">Todas</button>
+      <button class="filter-btn" data-filter="active">Pendientes</button>
+      <button class="filter-btn" data-filter="completed">Completadas</button>
+    </div>
+    
+    <ul id="todo-list"></ul>
+  </div>
+</body>
+</html>
